@@ -1,0 +1,165 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+<section class="section">
+<div class="container">
+
+
+    <div class="columns">
+
+    <div class="column">
+  <div class="field">
+    <p class="control has-icons-left">
+        <input class="input is-primary" type="text" placeholder="username" id="username">
+      <span class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+      </span>
+    </p>
+  </div></div>
+
+<div class="column">
+  <div class="field">
+    <p class="control has-icons-left">
+        <input class="input is-primary" type="password" placeholder="password" id="password">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </p>
+  </div>
+</div>
+
+<div class="column">
+  <div class="field">
+    <p class="control has-icons-left">
+        <input class="input is-primary" type="number" placeholder="4 digit PIN" id="pinnumber">
+      <span class="icon is-small is-left">
+        <i class="fas fa-key"></i>
+      </span>
+    </p>
+  </div>
+
+  </div>
+<div class="column">
+  <div class="buttons">
+        <a class="button is-fullwidth" href="#" id="logoutBtn" style="display: none;">    
+          <strong>Log out</strong>
+        </a>
+       
+        <a class="button is-primary is-fullwidth" href="#" id="loginBtn">    
+          <strong>Log in</strong>
+        </a>
+      </div>
+
+
+ </div>
+   
+  </div>
+
+
+
+<div class="columns">
+
+  <div class="column is-6">
+    <div class="field">
+      <p class="control has-icons-left">
+          <input class="input is-primary" type="text" placeholder="address to send" id="nanoAddr">
+        <span class="icon is-small is-left">
+          <i class="fas fa-wallet"></i>
+        </span>
+      </p>
+    </div>
+</div>
+ <div class="column">
+  <div class="field">
+    <p class="control has-icons-left">
+        <input class="input is-primary" type="number" placeholder="amount to send" id="nanoAmount">
+      <span class="icon is-small is-left">
+        <i class="fas fa-coins"></i>
+      </span>
+    </p>
+  </div>
+</div>
+     
+ <div class="column">
+  <button class="button is-danger is-outlined is-fullwidth" id="nanoSend">Send&nbsp;&nbsp;<i class="fab fa-telegram-plane"></i></button>
+</div>
+  </div>
+
+
+    <div class="columns">
+    <div class="column is-4">
+        <article class="message is-primary">
+            <div class="message-header">
+                <p class="has-text-centered">NANO Address QR Code</p>
+            </div>
+            <div class="message-body">
+                <center>
+                    <img src="https://chart.apis.google.com/chart?cht=qr&chs=300x300&chl=" alt="">
+                </center>
+            </div>
+
+        </article>
+    </div>
+    <div class="column">
+    <article class="message is-primary">
+        <div class="message-header">
+            <p>Avaible Balance</p>
+        </div>
+        <div class="message-body">
+            <strong>
+                <span id="v2">Fetching...</span>
+            </strong>
+        </div>
+    </article>
+    <article class="message is-danger">
+        <div class="message-header">
+            <p>Seed</p>
+        </div>
+        <div class="message-body">
+            <strong>
+                <span id="hashID">Fetching...</span>
+            </strong>
+        </div>
+    </article>
+        <article class="message is-info">
+        <div class="message-header">
+            <p>Address</p>
+        </div>
+        <div class="message-body">
+            <strong>
+                  
+                <span id="v1">Fetching...</span>
+            </strong>
+        </div>
+    </article>
+    </div>
+  </div>
+  </div>
+</section>
+
+  <section class="hero is-info">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="subtitle has-text-centered">Recent Transactions</h2>
+        </div>
+    </div>
+  </section>
+  <div class="table-container">
+    <table id="myTable" class="table is-hoverable is-fullwidth">
+        <thead>
+        <tr>
+        <th>Height</th>
+        <th>Type</th>
+        <th>Address</th>
+        <th>Amount</th>
+        </tr>
+        </thead>
+        </table>
+  </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js" ></script>  
+<script src="https://nanopay.besoeasy.com/pow.js" ></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script  src="sha256.js" ></script>
+<script defer src="script.js" ></script>
