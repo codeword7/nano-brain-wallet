@@ -53,9 +53,10 @@ function sendnano(address, amount){
               alert('Set PIN 4 digit')
               return;
           }
+
         console.log(user, password, pinNumber)
-        hash = sha256(user + password + pinNumber ) 
-        console.log(hash)
+        hash = CryptoJS.SHA256(String(user + password + pinNumber)) 
+
         localStorage.setItem("hash", hash); //storing the hash is your browser
         $("#username").prop('disabled', true);
         $("#password").prop('disabled', true);
