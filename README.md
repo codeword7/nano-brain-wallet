@@ -7,6 +7,9 @@ Simple NANO-CURRENCY brain wallet, it takes your username, password, 4-digit PIN
 * View Seed
 * View recent transitions (send/received)
 
+## Preview it
+[Nano-brain-wallet](https://codeword7.github.io/nano-brain-wallet)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
